@@ -7,6 +7,13 @@ These instructions will help you deploy the RSCT/RMC daemonset on an OCP cluster
 
 Use the instructions provided [here](https://github.com/ocp-power-automation/ocp4-playbooks#setting-up-inventory) to setup the inventory for your cluster. For deploying RSCT, you would only need to set the bastion host details in the inventory.
 
+Provide the hostname or the IP address of the bastion node in the inventory. An example of the inventory file would look like this:
+
+```
+$ cat inventory
+[bastion]
+192.168.26.155 ansible_connection=ssh ansible_user=root
+```
 
 **2. Set up the variables**
 
